@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
+
+xmlns:mc="http://schemas.openxmlformats.org/markup-
+compatibility/2006"
+
+x:Class="parte1tres.MainPage"
+Title="Calculadora ChekBox">
+    <ScrollView>
+        <VerticalStackLayout Padding="5">
+            <Label Text="Primer valor" FontSize="Medium"/>
+            <Border Stroke="Black" StrokeThickness="1">
+                <Entry x:Name="valor1" FontSize="Medium" Keyboard="Numeric"/>
+            </Border>
+            <Label Text="Segundo valor" FontSize="Medium"/>
+            <Border Stroke="Black" StrokeThickness="1">
+                <Entry x:Name="valor2" FontSize="Medium" Keyboard="Numeric"/>
+            </Border>
+            <HorizontalStackLayout>
+                <CheckBox x:Name="suma" />
+                <Label Text="Suma" FontSize="Medium">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+Tapped="TapGestureRecognizer_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <CheckBox x:Name="resta" />
+                <Label Text="Resta" FontSize="Medium">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+Tapped="TapGestureRecognizer_Tapped_1"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+            <Button Text="Calcular" FontSize="Medium"
+Clicked="Button_Clicked"/>
+            <Label x:Name="resultado" FontSize="Large" FontAttributes="Bold"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
